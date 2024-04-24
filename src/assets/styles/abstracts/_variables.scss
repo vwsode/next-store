@@ -1,0 +1,25 @@
+:root {
+
+
+    --media-hd-width: 1401px;
+    --media-tablet-width: 991px;
+    --media-mobile-width: 576px;
+
+    /* Colors */
+    --gray-white: rgba(255, 255, 255, 1);
+    --gray-95: rgba(242, 242, 242, 1);
+    --gray-80: rgba(204, 204, 204, 1);
+    --gray-60: rgba(153, 153, 153, 1);
+    --gray-40: rgba(102, 102, 102, 1);
+    --gray-25: rgba(64, 64, 64, 1);
+    --gray-black: rgba(13, 13, 13, 1);
+
+    --red-95: rgba(255, 171, 171, 1); // hover light
+    --red-80: rgba(255, 94, 94, 1); // hover
+    --red-60: rgba(255, 56, 56, 1); // static
+    --red-40: rgba(217, 48, 48, 1); // click
+    --red-25: rgba(166, 36, 36, 1); // click dark
+
+    --container-width: 1420px;
+    --container-spacing: 20px;
+}

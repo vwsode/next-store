@@ -1,0 +1,62 @@
+.text-field {
+	outline: none;
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 0;
+
+	/* gray/95% */
+	font-family: inherit;
+	border: 2px solid var(--gray-80);
+	border-radius: 8px;
+
+
+	transition: border-color 100ms;
+
+	width: 100%;
+	font-weight: 500;
+	line-height: 150%;
+	// text-align: center;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	&::placeholder {
+		color: var(--gray-60);
+
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			border-color: var(--gray-60);
+		}
+	}
+
+	&:active {
+		border-color: var(--gray-40);
+	}
+
+
+	color: var(--gray-black);
+
+
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus {
+		font-family: Raleway, sans-serif;
+		-webkit-box-shadow: 0 0 0 5000px #fff inset
+	}
+}
+
+.text-field-sm {
+	font-size: 14px;
+	padding: 7.5px 10px;
+
+}
+
+.text-field-md {
+	font-size: 16px;
+	padding: 9.5px 22px;
+	font-weight: 600;
+}

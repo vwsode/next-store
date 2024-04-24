@@ -1,0 +1,66 @@
+.title {
+	font-weight: 600;
+	display: block;
+	font-size: 16px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	color: var(--gray-black);
+}
+
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.content {}
+
+.input {
+	height: 36px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	list-style: none;
+
+	max-height: 152px;
+	overflow: hidden;
+	width: 100%;
+	transition: max-height 200ms;
+}
+
+.btnToggle {
+	display: flex;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 10px;
+
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	background-color: transparent;
+	color: var(--gray-40);
+	border: none;
+	outline: none;
+
+	cursor: pointer;
+
+
+	transition: color 100ms;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: #389BFF;
+		}
+	}
+
+	&:active {
+		color: #2D7CCC;
+	}
+}

@@ -1,0 +1,37 @@
+.nav-link {
+	font-size: 16px;
+	line-height: 150%;
+	font-weight: 600;
+	color: var(--gray-white);
+	text-decoration: none;
+
+	transition: color 100ms;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on, 'liga' off;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--red-80);
+
+			svg path {
+				fill: var(--red-80);
+			}
+		}
+	}
+
+	&:active {
+		color: var(--red-60);
+
+		svg path {
+			fill: var(--red-60);
+		}
+	}
+
+	svg path {
+		transition: fill 100ms;
+	}
+}

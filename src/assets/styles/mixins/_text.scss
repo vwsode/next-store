@@ -1,0 +1,10 @@
+@mixin truncate_text($lineClamp: 2) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lineClamp;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	position: relative;
+	visibility: visible;
+}

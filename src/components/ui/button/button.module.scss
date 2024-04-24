@@ -1,0 +1,104 @@
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on, 'liga' off;
+	transition: background 100ms, color 100ms;
+	font-family: inherit;
+	text-decoration: none;
+
+	&.iconCenter {
+		padding: 12px;
+		border-radius: 8px;
+	}
+}
+
+
+// VARIANTS
+// -------------
+
+.btn-red {
+	color: var(--gray-white);
+	background-color: var(--red-60);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--red-80);
+		}
+	}
+
+	&:active {
+		background-color: var(--red-40);
+	}
+}
+
+.btn-black {
+	background-color: var(--gray-black);
+	color: var(--gray-white);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--gray-25);
+		}
+	}
+
+	&:active {
+		background-color: var(--gray-40);
+	}
+}
+
+.btn-gray {}
+
+.btn-blue {}
+
+.btn-transparent {
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+
+	/* gray/60% */
+	color: var(--gray-60);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--red-60)
+		}
+	}
+
+	&:active {
+		color: var(--red-40)
+	}
+
+}
+
+
+// SIZE
+// -------------
+
+.btn-md {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10.5px 24px;
+	gap: 8px;
+	border-radius: 12px;
+
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+}
+
+.btn-sm {
+	padding: 8px 12px;
+	font-size: 16px;
+	border-radius: 8px;
+
+	font-weight: 500;
+	line-height: 150%;
+}

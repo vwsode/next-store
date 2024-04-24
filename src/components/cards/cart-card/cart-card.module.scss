@@ -1,0 +1,161 @@
+@use '/src/assets/styles/mixins/text';
+
+.card {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.tag {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.left {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	max-width: 452px;
+}
+
+.imageWrap {
+	position: relative;
+}
+
+.image {
+	width: 90px;
+	height: 90px;
+
+	border-radius: 8px;
+}
+
+.title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+	color: var(--gray-25);
+	text-decoration: none;
+
+	@include text.truncate_text(2);
+}
+
+.prices {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+}
+
+.price {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 150%;
+	text-align: right;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	color: var(--gray-black);
+	white-space: nowrap;
+}
+
+.price-old {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	text-align: right;
+	text-decoration-line: line-through;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	/* gray/60% */
+	color: var(--gray-60);
+}
+
+.right {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	margin-left: auto;
+}
+
+.quantity {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+
+.quantity-text {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+	color: var(--gray-80);
+}
+
+
+.control {
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+
+	&:not(.control-delete) {
+		svg path {
+			fill: var(--gray-60);
+		}
+	}
+
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			&:not(.control-delete) {
+				svg path {
+					fill: var(--red-80);
+				}
+			}
+		}
+	}
+
+	&:active {
+		&:not(.control-delete) {
+			svg path {
+				fill: var(--red-40);
+			}
+		}
+	}
+}
+
+.control-delete {
+	svg path {
+		stroke: var(--gray-60);
+	}
+
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			svg path {
+				stroke: var(--red-80);
+			}
+		}
+	}
+
+	&:active {
+		svg path {
+			stroke: var(--red-40);
+		}
+	}
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}

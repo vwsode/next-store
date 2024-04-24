@@ -1,0 +1,40 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.headline {
+	border-radius: 8px;
+	padding: 12px 140px 12px 112px;
+	background-color: var(--gray-95);
+	display: flex;
+	align-items: center;
+}
+
+.headlineTitle {
+	font-size: 14px;
+	color: var(--gray-20);
+	font-weight: 500;
+}
+
+.headlineQty {
+	font-size: 14px;
+	color: var(--gray-20);
+	margin-left: auto;
+	font-weight: 500;
+}
+
+.list {
+	flex: 1 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.divider {
+	border: none;
+	width: 100%;
+	height: 2px;
+	background-color: var(--gray-95);
+}

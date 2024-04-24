@@ -1,0 +1,57 @@
+.product {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 6.5px 12px 6.5px 16px;
+	text-decoration: none;
+	border-radius: 8px;
+
+	transition: background 100ms;
+
+	min-height: 40px;
+	justify-content: space-between;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--gray-95);
+
+			.icon path {
+				fill: var(--red-40);
+			}
+
+			.title {
+				color: var(--red-40);
+			}
+		}
+	}
+
+	&:active {
+		.title {
+			color: var(--red-25);
+		}
+
+		.icon path {
+			fill: var(--red-25);
+		}
+
+		background-color: var(--gray-80);
+	}
+}
+
+.title {
+	font-size: 16px;
+	line-height: 150%;
+	font-weight: 600;
+	color: var(--gray-25);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	transition: color 100ms;
+}
+
+.icon {
+	path {
+		transition: fill 100ms, stroke 100ms;
+	}
+}

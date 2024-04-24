@@ -1,0 +1,45 @@
+.crumb {
+	color: var(--gray-60);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+
+	text-decoration: none;
+
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 0;
+
+	transition: color 100ms;
+
+	svg path {
+		transition: fill 100ms;
+		fill: var(--gray-60);
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--red-60);
+
+			svg path {
+				fill: var(--red-60);
+			}
+		}
+	}
+
+	&:active {
+		color: var(--red-40);
+
+		svg path {
+			fill: var(--gray-40);
+		}
+	}
+
+	span {
+		color: inherit;
+	}
+}
+
+.last-crumb {
+	cursor: default;
+}

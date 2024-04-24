@@ -1,0 +1,32 @@
+.tag {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+	text-decoration: none;
+	color: var(--gray-white);
+
+	width: max-content;
+
+
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5px 8px;
+
+	border-radius: 6px;
+}
+
+.tag-new {
+	background: #379948;
+}
+
+.tag-hit {
+	background-color: #D93030;
+}
+
+.tag-sale {
+	background-color: #389BFF;
+}

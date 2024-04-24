@@ -1,0 +1,96 @@
+.select {
+	cursor: pointer;
+
+	display: flex;
+	position: relative;
+	z-index: 3;
+}
+
+.toggle {
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+
+	border: 2px solid var(--gray-60);
+	border-radius: 8px;
+	padding: 0px 8px 0px 12px;
+	height: 36px;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			border-color: var(--red-60);
+		}
+	}
+
+	&:active {
+		border-color: var(--red-40);
+	}
+}
+
+.current-value {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	text-align: center;
+	color: var(--gray-25);
+}
+
+.chevron {
+	transform: rotate(90deg);
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 12px;
+
+	position: absolute;
+	width: 100%;
+	list-style: none;
+	top: calc(100% + 12px);
+
+	background: var(--gray-white);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 12px 8px 12px;
+	gap: 10px;
+
+	width: 100%;
+
+	transition: padding-left 150ms, background 100ms;
+
+	border-radius: 8px;
+
+	flex: none;
+
+	/* Link */
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	/* gray/25% */
+	color: var(--gray-25);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--gray-95);
+			padding-left: 20px;
+		}
+	}
+
+	&:active {
+		background-color: var(--gray-80);
+		padding-left: 20px;
+	}
+}

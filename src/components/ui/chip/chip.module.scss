@@ -1,0 +1,62 @@
+.chip {
+	/* Interaction=Static, Usage=Active */
+
+	/* Auto layout */
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 6px 12px;
+	gap: 4px;
+
+	border-radius: 50px;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+
+	cursor: default;
+
+
+	&.deletable {
+		padding: 4px 8px 4px 12px;
+		cursor: pointer;
+	}
+
+	transition: background 100ms;
+}
+
+.chip-blue {
+	color: var(--gray-white);
+	background-color: #6BB5FF;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: #389BFF;
+		}
+	}
+
+	&:active {
+		background-color: #2D7CCC;
+	}
+}
+
+.chip-gray {
+	color: var(--gray-white);
+	background-color: var(--gray-80);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--gray-60);
+		}
+	}
+
+	&:active {
+		background-color: var(--gray-40);
+	}
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}

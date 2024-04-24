@@ -1,0 +1,17 @@
+@mixin HD () {
+    @media screen and (max-width: var(--media-hd-width)) {
+        @content;
+    }
+}
+
+@mixin Tablet () {
+    @media screen and (max-width: var(--media-tablet-width)) {
+        @content;
+    }
+}
+
+@mixin Mobile () {
+    @media screen and (max-width: var(--media-mobile-width)) {
+        @content;
+    }
+}

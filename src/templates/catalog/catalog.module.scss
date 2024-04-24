@@ -1,0 +1,25 @@
+.catalog {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	margin-bottom: 80px;
+}
+
+.section {
+	flex: 1 0 0;
+	width: 100%;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 100%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on;
+	color: var(--gray-black);
+	margin: 32px 0 40px 0;
+	max-width: 700px;
+}
+
+.content {
+	width: 100%;
+}

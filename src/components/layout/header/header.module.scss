@@ -1,0 +1,171 @@
+.header {
+	display: block;
+
+
+}
+
+.headerOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	background-color: var(--gray-black);
+	opacity: 0;
+
+	// transition: opacity 100ms;
+
+	&.active {
+		opacity: 0.5;
+		z-index: 1;
+	}
+}
+
+.headerMiddle {
+	background-color: var(--gray-black);
+	// height: 72px;
+	// display: flex;
+	align-items: center;
+	width: 100%;
+
+	top: 0;
+	transition: top 200ms;
+	z-index: 2;
+
+
+	// &.fixed {
+	//     position: fixed;
+	// }
+
+	// &.hidden {
+	//     opacity: 0;
+	//     position: fixed;
+	//     top: -72px;
+	// }
+}
+
+.headerSearchMenu {
+	position: absolute;
+	z-index: 2;
+	// transform: translateY(calc(100% + 12px));
+	width: 100%;
+	top: calc(100% + 12px);
+}
+
+.headerMiddleWrap {
+	display: flex;
+	align-items: center;
+	min-height: 72px;
+	width: 100%;
+}
+
+.headerSearchWrap {
+	padding: 0 20px;
+	flex: 1 0 0;
+}
+
+.headerSearch {
+	display: flex;
+	gap: 8px;
+	position: relative;
+}
+
+.headerControls {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding-left: 20px;
+	border-left: 2px solid var(--gray-25);
+	height: 40px;
+}
+
+.headerBottom {
+	padding: 4px 0;
+	background-color: var(--gray-95);
+}
+
+.headerBottomWrap {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.headerNav {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.headerNavLink {
+	padding: 9.5px 12px;
+	color: var(--gray-25);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+
+	&:nth-child(6) {
+		@media screen and (max-width: 1100px) {
+			display: none;
+		}
+	}
+
+	&:nth-child(5) {
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--red-60);
+		}
+	}
+
+	&:active {
+		color: var(--red-40);
+	}
+
+	&.headerNavLinkActive {
+		color: var(--red-80);
+	}
+}
+
+.headerContacts {
+	margin-left: auto;
+}
+
+.linkPhone {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	font-feature-settings: 'pnum' on, 'lnum' on, 'ss09' on, 'liga' off;
+	text-decoration: none;
+	color: var(--gray-25);
+	padding: 10.5px 12px;
+	display: inline-flex;
+}
+
+.linkLogo {
+	display: inline-flex;
+	align-items: center;
+	padding-right: 20px;
+	border-right: 2px solid var(--gray-25);
+}
+
+
+.searchMenu {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	top: calc(100% + 12px);
+}
+
+.search {
+	display: flex;
+	gap: 8px;
+	position: relative;
+	z-index: 2;
+}
